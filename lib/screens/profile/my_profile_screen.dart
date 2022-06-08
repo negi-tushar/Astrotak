@@ -1,5 +1,5 @@
 import 'package:astrotak/constants/constants.dart';
-import 'package:astrotak/screens/friend_family_list_page.dart';
+import 'package:astrotak/screens/profile/friend_family_list_page.dart';
 import 'package:astrotak/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
 
@@ -32,8 +32,14 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
               labelPadding: const EdgeInsets.all(15),
 
               tabs: const [
-                Text('Basic Profile'),
-                Text('Friends and Family Profile'),
+                Text(
+                  'Basic Profile',
+                  style: kNormaltext,
+                ),
+                Text(
+                  'Friends and Family Profile',
+                  style: kNormaltext,
+                ),
               ],
             ),
             const Expanded(

@@ -17,25 +17,28 @@ kWidthSpacer(value) {
   );
 }
 
+const kNormaltext = TextStyle(fontSize: 10);
+const kTableColumntext = TextStyle(fontSize: 12, color: Colors.blue);
+
 const kFormFieldLabel = TextStyle(
   color: Colors.grey,
   fontWeight: FontWeight.w400,
-  fontSize: 16,
+  fontSize: 12,
 );
 const kWitelabbel = TextStyle(
   color: Colors.white,
   fontWeight: FontWeight.bold,
-  fontSize: 14,
+  fontSize: 11,
 );
 
 const kHeading = TextStyle(
   fontWeight: FontWeight.bold,
-  fontSize: 18,
+  fontSize: 13,
 );
 const kBottomStyle = TextStyle(
   wordSpacing: 2,
   color: Color.fromARGB(255, 219, 135, 11),
-  fontSize: 14,
+  fontSize: 12,
 );
 
 List<DropdownMenuItem<String>> get dropdownItems {
@@ -61,14 +64,14 @@ List<DropdownMenuItem<String>> get gender {
 
 List<DropdownMenuItem<String>> get retation {
   const List<DropdownMenuItem<String>> menuItems = [
-    DropdownMenuItem(value: "Father", child: Text("Father")),
-    DropdownMenuItem(value: "Brother", child: Text("Brother")),
-    DropdownMenuItem(value: "Spouse", child: Text("Spouse")),
-    DropdownMenuItem(value: "Son", child: Text("Son")),
-    DropdownMenuItem(value: "Uncle", child: Text("Uncle")),
-    DropdownMenuItem(value: "Father in law", child: Text("Father in law")),
-    DropdownMenuItem(value: "Brother in law", child: Text("Brother in law")),
-    DropdownMenuItem(value: "Friend", child: Text("Friend")),
+    DropdownMenuItem(value: "1", child: Text("Father")),
+    DropdownMenuItem(value: "2", child: Text("Mother")),
+    DropdownMenuItem(value: "3", child: Text("Spouse")),
+    DropdownMenuItem(value: "4", child: Text("Son")),
+    DropdownMenuItem(value: "5", child: Text("Uncle")),
+    DropdownMenuItem(value: "6", child: Text("Father in law")),
+    DropdownMenuItem(value: "7", child: Text("Brother ")),
+    DropdownMenuItem(value: "8", child: Text("Friend")),
   ];
   return menuItems;
 }
@@ -81,3 +84,15 @@ const List questions = [
   'Will I ever meet my true love?',
   'When will i get in relationship?',
 ];
+
+void showSnackbar(
+    {required BuildContext context,
+    required String content,
+    required Color color}) {
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(
+      content: Text(content),
+      backgroundColor: color,
+    ),
+  );
+}

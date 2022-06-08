@@ -2,8 +2,10 @@ import 'package:astrotak/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomToggleButton extends StatefulWidget {
-  CustomToggleButton({Key? key, required this.timeZone}) : super(key: key);
+  CustomToggleButton({Key? key, required this.timeZone, required this.onchange})
+      : super(key: key);
   late String timeZone;
+  final Function(String val) onchange;
 
   @override
   State<CustomToggleButton> createState() => _CustomToggleButtonState();
@@ -36,13 +38,14 @@ class _CustomToggleButtonState extends State<CustomToggleButton> {
               buttonIndex++) {
             if (buttonIndex == index) {
               isSelected[buttonIndex] = true;
-              widget.timeZone = 'AM';
+              widget.timeZone = 'PM';
             } else {
               isSelected[buttonIndex] = false;
-              widget.timeZone = 'PM';
+              widget.timeZone = 'AM';
             }
           }
         });
+        widget.onchange(widget.timeZone);
       },
       isSelected: isSelected,
       children: const [

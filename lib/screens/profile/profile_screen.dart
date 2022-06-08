@@ -49,6 +49,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: const Text(
                   'Logout',
                   style: TextStyle(
+                    fontSize: 10,
                     color: kOrangeColor,
                   ),
                 ),
@@ -63,11 +64,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             tabs: [
               Text(
                 'My Profile',
-                // style: TextStyle(color: kOrangeColor),
+                style: kNormaltext,
               ),
               Text(
                 'Order History',
-                // style: TextStyle(color: kOrangeColor),
+                style: kNormaltext,
               ),
             ],
           ),

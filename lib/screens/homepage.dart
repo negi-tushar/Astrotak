@@ -13,8 +13,8 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  int _index = 2;
-
+  int _index = 0;
+  final double _iconheight = 15;
   List<Widget> pages = [
     const MyPlaceHolder(),
     const MyPlaceHolder(),
@@ -37,7 +37,8 @@ class _HomepageState extends State<Homepage> {
           elevation: 0,
           showUnselectedLabels: true,
           type: BottomNavigationBarType.fixed,
-          selectedFontSize: 12,
+          selectedFontSize: 10,
+          unselectedFontSize: 10,
           currentIndex: _index,
           selectedItemColor: kOrangeColor,
           unselectedItemColor: Colors.black,
@@ -48,8 +49,8 @@ class _HomepageState extends State<Homepage> {
               icon: Image(
                 color: _index == 0 ? kOrangeColor : Colors.black,
                 image: const AssetImage('assets/images/home.png'),
-                height: 20,
-                width: 20,
+                height: _iconheight,
+                width: _iconheight,
               ),
             ),
             BottomNavigationBarItem(
@@ -57,8 +58,8 @@ class _HomepageState extends State<Homepage> {
               icon: Image(
                 color: _index == 1 ? kOrangeColor : Colors.black,
                 image: const AssetImage('assets/images/talk.png'),
-                height: 20,
-                width: 20,
+                height: _iconheight,
+                width: _iconheight,
               ),
             ),
             BottomNavigationBarItem(
@@ -66,8 +67,8 @@ class _HomepageState extends State<Homepage> {
               icon: Image(
                 color: _index == 2 ? kOrangeColor : Colors.black,
                 image: const AssetImage('assets/images/ask.png'),
-                height: 20,
-                width: 20,
+                height: _iconheight,
+                width: _iconheight,
               ),
             ),
             BottomNavigationBarItem(
@@ -75,8 +76,8 @@ class _HomepageState extends State<Homepage> {
               icon: Image(
                 color: _index == 3 ? kOrangeColor : Colors.black,
                 image: const AssetImage('assets/images/reports.png'),
-                height: 20,
-                width: 20,
+                height: _iconheight,
+                width: _iconheight,
               ),
             ),
             BottomNavigationBarItem(
@@ -84,8 +85,8 @@ class _HomepageState extends State<Homepage> {
               icon: Image(
                 color: _index == 4 ? kOrangeColor : Colors.black,
                 image: const AssetImage('assets/images/chat.png'),
-                height: 20,
-                width: 20,
+                height: _iconheight,
+                width: _iconheight,
               ),
             ),
           ]),

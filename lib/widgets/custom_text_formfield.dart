@@ -5,13 +5,16 @@ class CustomTextFormField extends StatelessWidget {
     Key? key,
     required this.maxlength,
     required this.hintText,
+    required this.controller,
   }) : super(key: key);
   final int maxlength;
   final String hintText;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       textInputAction: TextInputAction.next,
       maxLength: maxlength,
       keyboardType: TextInputType.datetime,
